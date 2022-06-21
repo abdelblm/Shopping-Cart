@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>shopping Carts</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center">Shopping Cart</h1>
+      <nav>
+        <a class="cart" href="cart.html">
+          <ion-icon name="cart-outline"></ion-icon>Cart <span>0</span>
+        </a>
+      </nav>
+    </header>
+
+    <div class="Cart-Container">
+      <div class="all-carts">
+        <div class="first-cart">
+          <div class="card">
+            <h1>Apple Watch Nike</h1>
+            <div class="wrapper">
+              <span class="minus">-</span>
+              <div class="num">0</div>
+              <span class="plus">+</span>
+            </div>
+
+            <a href="#" class="like">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </a>
+            <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+            <script>
+              $(".heart.fa").click(function () {
+                $(this).toggleClass("fa-heart fa-heart-o");
+              });
+
+              $(document).ready(function () {
+                $(".like").click(function () {
+                  $(this).toggleClass("heart");
+                });
+              });
+            </script>
+
+            <div class="total-price">$399</div>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-nike-202205?wid=340&hei=264&fmt=jpeg&qlt=95&.v=1651697633508"
+              alt="airpods pro"
+              style="width: 100%"
+            />
+
+            <a class="add-cart cart1" href="#">Add Cart</a>
+          </div>
+        </div>
+
+        <div class="second-cart">
+          <div class="card">
+            <h1>Apple Watch Series 7</h1>
+            <div class="wrapper">
+              <span class="min">-</span>
+              <div class="nmb">0</div>
+              <span class="pls">+</span>
+            </div>
+            <script>
+              const pls = document.querySelector(".pls");
+              min = document.querySelector(".min");
+              nmb = document.querySelector(".nmb");
+              let c = 0;
+
+              pls.addEventListener("click", () => {
+                c++;
+                c = c < 10 ? "0" + c : c;
+                nmb.innerText = c;
+                console.log(c);
+              });
+              min.addEventListener("click", () => {
+                if (c > 0) {
+                  c--;
+                  c = b < 10 ? "0" + c : c;
+                  nmb.innerText = c;
+                }
+              });
+            </script>
+            <a href="#" class="like">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="total-price">$399</div>
+
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s7-202205?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1651697659652"
+              alt="airpods pro"
+              style="width: 100%"
+            />
+
+            <a class="add-cart cart1" href="#">Add Cart</a>
+          </div>
+        </div>
+        <div class="third-cart">
+          <div class="card">
+            <h1>Apple Watch SE</h1>
+
+            <div class="wrapper">
+              <span class="mbtn">-</span>
+              <div class="nbtn">0</div>
+              <span class="pbtn">+</span>
+            </div>
+            <script>
+              const mbtn = document.querySelector(".mbtn");
+              nbtn = document.querySelector(".nbtn");
+              pbtn = document.querySelector(".pbtn");
+
+              let b = 0;
+
+              pbtn.addEventListener("click", () => {
+                b++;
+                b = b < 10 ? "0" + b : b;
+                nbtn.innerText = b;
+                console.log(b);
+              });
+              mbtn.addEventListener("click", () => {
+                if (b > 0) {
+                  b--;
+                  b = b < 10 ? "0" + b : b;
+                  nbtn.innerText = b;
+                }
+              });
+            </script>
+            <a href="#" class="like">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </a>
+
+            <div class="total-price">$399</div>
+            <img
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-se-202203?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1645382412806"
+              alt="airpods pro"
+              style="width: 100%"
+            />
+
+            <a class="add-cart cart1" href="#">Add Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
